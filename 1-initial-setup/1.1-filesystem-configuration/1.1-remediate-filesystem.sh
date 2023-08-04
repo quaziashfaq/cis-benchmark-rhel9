@@ -7,6 +7,8 @@ sudo ./1.1.1.1-remediate-ensure-mounting-of-squashfs-filesystems-is-disabled.sh
 sudo ./1.1.1.2-remediate-ensure-mounting-of-udf-filesystems-is-disabled.sh
 
 # 1.1.2 Configure /tmp
+sudo ./1.1.2.1-remediate-ensure-tmp-is-a-separate-partition.sh
+
 # 1.1.3 Configure /var
 # 1.1.4 Configure /var/tmp
 # 1.1.5 Configure /var/log
