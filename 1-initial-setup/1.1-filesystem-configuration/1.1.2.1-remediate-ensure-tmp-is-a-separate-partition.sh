@@ -9,6 +9,7 @@ remediate_ensure_tmp_is_a_separate_partition() {
     echo "For specific configuration requirements of the /tmp mount for your environment, modify /etc/fstab."
     echo "Example of using tmpfs with specific mount options:"
     echo "tmpfs /tmp tmpfs defaults,rw,nosuid,nodev,noexec,relatime,size=NG 0 "
+    echo ""
 }
 
 remediate_ensure_tmp_is_a_separate_partition
