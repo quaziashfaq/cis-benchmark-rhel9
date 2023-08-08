@@ -2,7 +2,7 @@
 
 # 1.1.2.4 Ensure nosuid option set on /tmp partition
 
-remediate-ensure-nosuid-option-set-on-tmp-partition() {
+remediate_ensure_nosuid_option_set_on_tmp_partition() {
 
 cat <<USAGE
 
@@ -14,4 +14,5 @@ Run the following command to remount /tmp with the configured options:
 
 USAGE
 }
-remediate-ensure-nosuid-option-set-on-tmp-partition
+
+remediate_ensure_nosuid_option_set_on_tmp_partition

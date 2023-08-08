@@ -2,7 +2,7 @@
 
 # 1.1.3.1 Ensure separate partition exists for /var
 
-remediate-ensure-separate-partition-exists-for-var() {
+remediate_ensure_separate_partition_exists_for_var() {
 
 cat <<USAGE
 
@@ -14,4 +14,4 @@ USAGE
 
 }
 
-remediate-ensure-separate-partition-exists-for-var
+remediate_ensure_separate_partition_exists_for_var
