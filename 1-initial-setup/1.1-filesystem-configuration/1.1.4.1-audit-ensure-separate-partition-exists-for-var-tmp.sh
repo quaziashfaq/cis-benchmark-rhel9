@@ -10,7 +10,7 @@ source ../../utilities.sh
 
 audit_ensure_var_tmp_is_a_separate_partition() {
 
-    echo -n "1.1.4.1 Ensure separate partition exists for /var/tmp"
+    echo -n "1.1.4.1 Ensure separate partition exists for /var/tmp: "
 
     if [[ "$(findmnt --kernel /var/tmp | sed '1d' | wc -l)" -eq 1 ]]; then
         test_passed "Pass"
