@@ -13,8 +13,10 @@ audit_ensure_home_is_a_separate_partition() {
 
     if [[ "$(findmnt --kernel /home | sed '1d' | wc -l)" -eq 1 ]]; then
         test_passed "Pass"
+        exit 0
     else
         test_failed "Fail"
+        exit 1
     fi
 
 }

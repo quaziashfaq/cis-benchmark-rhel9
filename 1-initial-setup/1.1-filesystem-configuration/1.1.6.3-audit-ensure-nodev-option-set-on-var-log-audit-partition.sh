@@ -12,8 +12,10 @@ audit_ensure_nodev_option_set_on_var_log_audit_partition() {
 
     if [[ "$(findmnt --kernel /var/log/audit | grep nodev | wc -l)" -eq 1 ]]; then
         test_passed "Pass"
+        exit 0
     else
         test_failed "Fail"
+        exit 1
     fi
 }
 

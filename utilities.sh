@@ -8,7 +8,7 @@ function print_color() {
     esac
 
     NC="\033[0m"
-    echo -e "${COLOR}$2 ${NC}"
+    echo -e "${COLOR}${@:2} ${NC}"
 }
 
 

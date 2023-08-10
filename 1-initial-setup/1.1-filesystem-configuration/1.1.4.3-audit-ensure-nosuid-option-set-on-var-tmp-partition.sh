@@ -11,8 +11,10 @@ audit_ensure_nosuid_option_set_on_var_tmp_partition() {
 
     if [[ "$(findmnt --kernel /var/tmp | grep nosuid | wc -l)" -eq 1 ]]; then
         test_passed "Pass"
+        exit 0
     else
         test_failed "Fail"
+        exit 1
     fi
 }
 

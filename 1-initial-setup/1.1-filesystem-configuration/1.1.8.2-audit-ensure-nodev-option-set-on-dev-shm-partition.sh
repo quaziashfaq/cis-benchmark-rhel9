@@ -12,8 +12,10 @@ audit_ensure_nodev_option_set_on_dev_shm_partition() {
     if [[ "$(findmnt --kernel /dev/shm | grep nodev | wc -l)" -eq 1 ]]; then
     #if [[ "$(mount | grep -E '\s/dev/shm\s' | grep -v nodev)" == "" ]]; then
         test_passed "Pass"
+        exit 0
     else
         test_failed "Fail"
+        exit 1
     fi
 }
 
