@@ -2,6 +2,8 @@
 
 # 1.1.1.2 Ensure mounting of udf filesystems is disabled
 
+source ../../utilities.sh
+
 audit_ensure_mounting_of_udf_filesystems_is_disabled()
 {
     l_output="" 
@@ -40,9 +42,11 @@ audit_ensure_mounting_of_udf_filesystems_is_disabled()
 
     # Report results. If no failures output in l_output2, we pass
     if [ -z "$l_output2" ]; then
-        echo -e "\n- Audit Result:\n ** PASS **\n$l_output\n"
+        # echo -e "\n- Audit Result:\n ** PASS **\n$l_output\n"
+        test_passed "\n- Audit Result:\n ** PASS **\n$l_output\n"
     else
-        echo -e "\n- Audit Result:\n ** FAIL **\n - Reason(s) for audit failure:\n$l_output2\n"
+        # echo -e "\n- Audit Result:\n ** FAIL **\n - Reason(s) for audit failure:\n$l_output2\n"
+        test_failed "\n- Audit Result:\n ** FAIL **\n - Reason(s) for audit failure:\n$l_output2\n"
         [ -n "$l_output" ] && echo -e "\n- Correctly set:\n$l_output\n"
     fi
 }
