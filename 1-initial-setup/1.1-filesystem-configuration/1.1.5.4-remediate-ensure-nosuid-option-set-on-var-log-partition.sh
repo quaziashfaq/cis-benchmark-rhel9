@@ -17,5 +17,5 @@ USAGE
 
 }
 
-remediate_ensure_nosuid_option_set_on_log_partition
+remediate_ensure_nosuid_option_set_on_var_log_partition
 
