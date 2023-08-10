@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# 1.1.8.2 Ensure nodev option set on /dev/shm partition
+
+
+source ../../utilities.sh
+
+audit_ensure_nodev_option_set_on_dev_shm_partition() {
+
+    echo -n "1.1.8.2 Ensure nodev option set on /dev/shm partition: "
+
+    if [[ "$(findmnt --kernel /dev/shm | grep nodev | wc -l)" -eq 1 ]]; then
+    #if [[ "$(mount | grep -E '\s/dev/shm\s' | grep -v nodev)" == "" ]]; then
+        test_passed "Pass"
+    else
+        test_failed "Fail"
+    fi
+}
+
+
+audit_ensure_nodev_option_set_on_dev_shm_partition
+
