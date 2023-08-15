@@ -2,6 +2,7 @@
 
 # 1.2.1 Ensure GPG keys are configured (Manual)
 
+echo "1.2.1 Ensure GPG keys are configured (Manual)"
 
 # List all GPG key URLs
 echo "Listing all GPG key URLs..."
