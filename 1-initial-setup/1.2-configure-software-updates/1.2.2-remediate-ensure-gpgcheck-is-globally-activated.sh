@@ -4,10 +4,6 @@
 
 audit_ensure_gpgcheck_is_globally_activated()
 {
-
-
-
-
     find /etc/yum.repos.d/ -name "*.repo" \
         -exec echo -n "Backing up: " \; \
         -exec cp -pv {} "{}.bkp.$(date '+%Y%m%dT%H%M')" \; \
@@ -15,3 +11,6 @@ audit_ensure_gpgcheck_is_globally_activated()
         -exec sed -i 's/^gpgcheck\s*=\s*.*/gpgcheck=1/' {} \;
 
 }
+
+
+audit_ensure_gpgcheck_is_globally_activated
