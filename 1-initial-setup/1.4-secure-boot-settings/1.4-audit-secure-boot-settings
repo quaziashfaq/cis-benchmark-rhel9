@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+
+DIR="$(realpath "$(dirname "${BASH_SOURCE[0]}")")"
+
+echo "1.4 Secure Boot Settings: "
+
+# Run this scritp with sudo or as root
+sudo "${DIR}"/1.4.1-audit-ensure-bootloader-password-is-set.sh
+sudo "${DIR}"/1.4.2-audit-ensure-permissions-on-bootloader-config-are-configured.sh
