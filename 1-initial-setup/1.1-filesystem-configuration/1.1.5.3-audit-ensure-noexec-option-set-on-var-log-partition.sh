@@ -4,7 +4,7 @@
 # /var/log /dev/sdb ext4 rw,nosuid,nodev,noexec,relatime,seclabel
 
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_noexec_option_set_on_var_log_partition() {
 

@@ -6,7 +6,7 @@
 # /var/log /dev/sdb ext4 rw,relatime,seclabel,data=ordered
 
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_var_log_is_a_separate_partition() {
 

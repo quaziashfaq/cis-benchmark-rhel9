@@ -3,7 +3,7 @@
 
 # 1.1.3.1 Ensure separate partition exists for /var
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_var_is_a_separate_partition() {
 

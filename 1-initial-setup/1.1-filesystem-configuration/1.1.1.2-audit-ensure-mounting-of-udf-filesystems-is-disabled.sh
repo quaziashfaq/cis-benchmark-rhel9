@@ -2,7 +2,7 @@
 
 # 1.1.1.2 Ensure mounting of udf filesystems is disabled
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_mounting_of_udf_filesystems_is_disabled()
 {

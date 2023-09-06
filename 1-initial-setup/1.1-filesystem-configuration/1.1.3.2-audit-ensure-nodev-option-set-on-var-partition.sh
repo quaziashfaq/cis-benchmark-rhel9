@@ -4,7 +4,7 @@
 # 1.1.3.2 Ensure nodev option set on /var partition 
 # /var /dev/sdb ext4 rw,nosuid,nodev,noexec,relatime,seclabel
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_nodev_option_set_on_var_partition() {
     echo -n "1.1.3.2 Ensure nodev option set on /var partition: "

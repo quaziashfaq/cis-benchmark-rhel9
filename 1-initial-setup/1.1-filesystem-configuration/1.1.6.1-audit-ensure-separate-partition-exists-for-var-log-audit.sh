@@ -7,7 +7,7 @@
 
 
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_var_log_audit_is_a_separate_partition() {
 

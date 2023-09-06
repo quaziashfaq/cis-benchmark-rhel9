@@ -3,7 +3,7 @@
 # 1.1.7.3 Ensure nosuid option set on /home partition
 # /home /dev/sdb ext4 rw,nosuid,nodev,noexec,relatime,seclabel
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_nosuid_option_set_on_home_partition() {
 

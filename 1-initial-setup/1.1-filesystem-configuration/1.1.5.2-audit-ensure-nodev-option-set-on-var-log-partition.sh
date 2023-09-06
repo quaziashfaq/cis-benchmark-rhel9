@@ -4,7 +4,7 @@
 # 1.1.5.2 Ensure nodev option set on /var/log partition
 # /var/log /dev/sdb ext4 rw,nosuid,nodev,noexec,relatime,seclabel
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_nodev_option_set_on_var_log_partition() {
 

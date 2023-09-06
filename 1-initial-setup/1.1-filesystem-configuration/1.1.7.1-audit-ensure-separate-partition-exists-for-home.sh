@@ -5,7 +5,7 @@
 # /home /dev/sdb ext4 rw,relatime,seclabel
 
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_home_is_a_separate_partition() {
 

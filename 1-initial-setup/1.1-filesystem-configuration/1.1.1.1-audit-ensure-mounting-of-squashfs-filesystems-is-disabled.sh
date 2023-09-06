@@ -2,7 +2,7 @@
 
 # 1.1.1.1 Ensure mounting of squashfs filesystems is disabled
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 function audit_ensure_mounting_of_squashfs_filesystems_is_disabled() {
     l_output="" 

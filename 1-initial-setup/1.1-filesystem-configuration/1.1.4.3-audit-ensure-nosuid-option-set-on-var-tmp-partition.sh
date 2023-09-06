@@ -3,7 +3,7 @@
 # 1.1.4.3 Ensure nosuid option set on /var/tmp partition
 
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_nosuid_option_set_on_var_tmp_partition() {
 

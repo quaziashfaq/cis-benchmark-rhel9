@@ -2,7 +2,7 @@
 
 # 1.1.9 Disable USB Storage
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 
 audit_disable_usb_storage() 

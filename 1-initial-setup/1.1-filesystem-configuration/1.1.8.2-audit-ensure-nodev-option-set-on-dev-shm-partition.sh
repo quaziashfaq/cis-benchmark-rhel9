@@ -3,7 +3,7 @@
 # 1.1.8.2 Ensure nodev option set on /dev/shm partition
 
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_nodev_option_set_on_dev_shm_partition() {
 

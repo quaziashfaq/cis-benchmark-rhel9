@@ -5,7 +5,7 @@
 # /dev/shm tmpfs tmpfs rw,nosuid,nodev,noexec,relatime,seclabel
 
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_dev_shm_is_a_separate_partition() {
 

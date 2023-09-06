@@ -3,7 +3,7 @@
 # 1.1.2.4 Ensure nosuid option set on /tmp partition
 # /tmp tmpfs tmpfs rw,nosuid,nodev,noexec,relatime,seclabel
 
-source ../../utilities.sh
+source "$(realpath "$(dirname "${BASH_SOURCE[0]}")")"/../../utilities.sh
 
 audit_ensure_nosuid_option_set_on_tmp_partition() {
     echo -n "1.1.2.4 Ensure nosuid option set on /tmp partition: "
